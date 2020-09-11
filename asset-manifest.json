@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/KonectaBlog/static/css/main.8aabb8e0.chunk.css",
+    "main.js": "/KonectaBlog/static/js/main.7902b93b.chunk.js",
+    "main.js.map": "/KonectaBlog/static/js/main.7902b93b.chunk.js.map",
+    "runtime-main.js": "/KonectaBlog/static/js/runtime-main.c2178b05.js",
+    "runtime-main.js.map": "/KonectaBlog/static/js/runtime-main.c2178b05.js.map",
+    "static/js/2.3e27f59f.chunk.js": "/KonectaBlog/static/js/2.3e27f59f.chunk.js",
+    "static/js/2.3e27f59f.chunk.js.map": "/KonectaBlog/static/js/2.3e27f59f.chunk.js.map",
+    "index.html": "/KonectaBlog/index.html",
+    "precache-manifest.91ffe38a4f262698f17c803a9124ad40.js": "/KonectaBlog/precache-manifest.91ffe38a4f262698f17c803a9124ad40.js",
+    "service-worker.js": "/KonectaBlog/service-worker.js",
+    "static/css/main.8aabb8e0.chunk.css.map": "/KonectaBlog/static/css/main.8aabb8e0.chunk.css.map",
+    "static/js/2.3e27f59f.chunk.js.LICENSE.txt": "/KonectaBlog/static/js/2.3e27f59f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c2178b05.js",
+    "static/js/2.3e27f59f.chunk.js",
+    "static/css/main.8aabb8e0.chunk.css",
+    "static/js/main.7902b93b.chunk.js"
+  ]
+}
