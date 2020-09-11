@@ -1,4 +1,7 @@
-#KonectaBlog
+# KonectaBlog
+
+## Preview
+https://leidercalvo.github.io/KonectaBlog/
 
 Este es un blog que tiene la capacidad de crear usuarios, a los cuales les permite subir distintos artículos con diferentes categorías que serán mostrados a otros usuarios de la aplicación. Para resolver esta prueba técnica de 5 horas de desarrolló una Single page application en React que hace uso de firebase como solución ágil ante la necesidad de autenticación, bases de datos y storage de contenido.
 
