@@ -1,0 +1,76 @@
+@import "../../utils/vars";
+
+.Modal {
+    .loging {
+        padding: 20px;
+    }
+}
+.loging {
+    @include center();
+    flex-direction: column;
+    text-align: center;
+
+    h5 {
+        font-weight: 800;
+    }
+
+    & > p {
+        margin: 5px 0 $main-padding/1.2;
+    }
+
+    .socialMediaBtns {
+        @include row();
+        width: 450px;
+
+        .facebook ~ p {
+            margin-top: $main-padding/1.2;
+        }
+
+        .google,
+        .facebook {
+            display: inline-block;
+            width: 48%;
+
+            button {
+                @include center();
+                border: none;
+                font-weight: 300;
+                margin: 0;
+
+                svg {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        .google {
+            margin-right: 2%;
+            button {
+                background-color: white;
+                color: black;
+                border: solid 1px black;
+                font-weight: 700;
+            }
+        }
+
+        .facebook {
+            button {
+                background-color: #3c5b96;
+            }
+        }
+    }
+    form .buttonConter {
+        @include center();
+        button {
+            max-width: 450px;
+            margin-top: $main-padding;
+            margin-bottom: $main-padding/2;
+        }
+    }
+
+    .changer {
+        width: fit-content;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+}

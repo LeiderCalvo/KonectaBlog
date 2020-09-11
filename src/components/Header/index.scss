@@ -1,0 +1,33 @@
+@import '../../utils/vars';
+
+header {
+    @include row();
+    padding: 15px 100px;
+    background-color: $purple;
+    @include box-shadow();
+
+    .logo {
+        text-align: left;
+        font-weight: bolder;
+        letter-spacing: 0.02em;
+        line-height: 100%;
+        color: $white;
+    }
+
+    nav {
+        * {
+            color: $white;
+            opacity: .6;
+        }
+        
+        a + a {
+            margin-left: 20px;
+        }
+    }
+
+    .selected {
+        border-bottom: solid 1px $white;
+        font-weight: bold;
+        opacity: 1;
+    }
+}

@@ -1,0 +1,168 @@
+.inputConter {
+    position: relative;
+    margin-bottom: 12px;
+    width: 100%;
+    text-align: left;
+
+    span {
+        @include font-size(24);
+        color: $soft-gray;
+        padding: 2px 10px;
+        background-color: white;
+        pointer-events: none;
+        position: absolute;
+        left: 15px;
+        top: 10px;
+        transition: 0.2s;
+        transition-timing-function: ease;
+        transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        border-radius: 5px;
+    }
+
+    small {
+        color: $red;
+        padding-left: 15px;
+    }
+
+    p {
+        @include font-size(20);
+        padding-top: 3px;
+    }
+}
+
+select,
+input,
+textarea {
+    @include font-size(24);
+    width: 100%;
+    height: fit-content;
+    min-height: 45px;
+    padding: 15px;
+    padding-left: 25px;
+    border: 1px solid $soft-gray;
+    color: $soft-gray;
+    border-radius: 10px;
+    font-weight: normal;
+    background-color: white;
+
+    &:focus {
+        border-color: $gray;
+        outline: none;
+    }
+
+    &:focus + span {
+        transform: scale(0.85) translateY(-24px) translateX(-10px);
+        color: $green;
+    }
+
+    &:valid {
+        border-color: $gray;
+        //color: $gray;
+    }
+
+    &:valid + span {
+        color: $gray;
+        transform: scale(0.85) translateY(-24px) translateX(-10px);
+    }
+
+    &.error {
+        border: 1px solid $red;
+        background: url(https://cdn0.iconfinder.com/data/icons/shift-free/32/Error-512.png) 97% 50% no-repeat;
+        background-position-x: 90%;
+        background-size: 20px;
+    }
+
+    &.error + span {
+        color: $red;
+    }
+}
+
+select {
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right;
+    -webkit-appearance: none;
+    background-position-x: 90%;
+}
+
+input[type="date"] {
+    background: url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50%
+        no-repeat;
+    background-position-x: 90%;
+    &::-webkit-inner-spin-button {
+        display: none;
+    }
+    &::-webkit-calendar-picker-indicator {
+        opacity: 0;
+    }
+}
+
+input[type="range"] {
+    position: relative;
+    -webkit-appearance: none;
+    width: 55%;
+
+    &:hover {
+        &:after {
+            opacity: 0.5;
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &::-webkit-slider-runnable-track {
+        height: 5px;
+        cursor: pointer;
+        transition: 0.2s;
+        background: #e5e5e5;
+        border-radius: 5px;
+    }
+
+    &::-webkit-slider-thumb {
+        height: 15px;
+        width: 15px;
+        border-radius: 25px;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -5px;
+        transition: all 2s ease-in;
+    }
+}
+
+////////////////////////////////////////////
+.input--number {
+    @include row();
+    width: fit-content;
+
+    &__less,
+    &__plus {
+        @include font-size(24);
+        @include center();
+        border-radius: 50%;
+        padding: 0;
+        width: 20px;
+        height: 20px;
+        letter-spacing: unset;
+        font-weight: 400;
+    }
+
+    &__display {
+        @include font-size(28);
+        font-weight: 700;
+        padding: 0;
+        border: none;
+        margin: 0;
+        text-align: center;
+        color: $black;
+        min-height: unset;
+        width: 60px;
+
+        &:hover::-webkit-inner-spin-button,
+        &:hover::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            appearance: none;
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.buttonConter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    small {
+        color: $red;
+        padding: 0 15px;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+button {
+    width: 100%;
+    padding: 8px;
+    max-width: 200px;
+    min-width: fit-content;
+    @include font-size(20);
+    background-color: $black;
+    border-radius: 30px;
+    border: 2px solid $black;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $black;
+        border-color: $black;
+    }
+}
+
+button.error {
+    background-color: $red;
+    border: none;
+}
+
+.button--border {
+    background-color: white;
+    border-color: $black;
+    color: $black;
+
+    svg {
+        fill: $black;
+    }
+
+    &:hover {
+        border-color: $green;
+        background-color: white;
+        svg {
+            fill: $green;
+        }
+    }
+}
+
+button[disabled] {
+    pointer-events: none;
+    opacity: 0.2;
+}

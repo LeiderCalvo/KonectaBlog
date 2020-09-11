@@ -1,0 +1,106 @@
+$black: #1b232e;
+$gray: #626c75;
+$soft_gray: #c4c4c4;
+$red: #ff5454;
+$green: #26d579;
+
+$purple: #7638FF;
+$white: #fff;
+$orange: #FF891F;
+
+$base-font-size: 30;
+
+$main_padding: 20px;
+$product_border: 15px;
+
+@mixin font-size($param) {
+    //((Xpt*Kpx) / Bpx) * 1em --> ((points to pixels) divided by base) * type
+    font-size: (($param * 1.3333) / $base-font-size) * 1em;
+}
+
+@mixin width($param, $param2) {
+    width: $param / $param2 * 100%;
+}
+
+@mixin height($param, $param2) {
+    height: $param / $param2 * 100%;
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@mixin colums($amount, $space) {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    & > * {
+        width: (100% / $amount) - $space;
+        //margin: ($space/2) + 0%;
+    }
+}
+
+@mixin colum {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin wrap($amount, $space) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    & > * {
+        width: (100% / $amount) - $space;
+        margin: ($space/2) + 0%;
+    }
+}
+
+@mixin scroll-bar {
+    overflow-y: hidden;
+    &:hover {
+        overflow-y: auto;
+    }
+
+    &::-webkit-scrollbar {
+        width: 7px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #fff;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #3da9fcaf;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: #3da9fc;
+    }
+}
+
+@mixin box-shadow {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+
+    &:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+}

@@ -1,0 +1,25 @@
+@import '../../utils/vars';
+
+.PostCreator {
+    padding: 40px;
+    padding-top: 60px;
+
+    section {
+        @include row();
+
+        form {
+            width: 48%;
+            margin-top: 30px;
+
+            button {
+                width: 100%;
+                max-width: unset;
+            }
+        }
+
+        img {
+            width: 48%;
+
+        }
+    }
+}
