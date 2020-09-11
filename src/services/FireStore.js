@@ -56,18 +56,14 @@ const addPost = post => {
         .catch(error => { throw error })
 }
 
-const getAllPosts = _ => {
-    const temp = []
-    const unsuscribe = DB.collection("posts")
-        .onSnapshot(docs => {
+const getAllPosts = () => {
+    return DB.collection("posts").get()
+        .then(docs => {
+            const temp = []
             !docs.empty &&
                 docs.docs.forEach(doc => temp.push(doc.data()))
+            return temp
         })
-
-    return {
-        unsuscribe,
-        data: temp
-    }
 }
 
 export default {
