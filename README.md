@@ -1,3 +1,20 @@
+#KonectaBlog
+
+Este es un blog que tiene la capacidad de crear usuarios, a los cuales les permite subir distintos artículos con diferentes categorías que serán mostrados a otros usuarios de la aplicación. Para resolver esta prueba técnica de 5 horas de desarrolló una Single page application en React que hace uso de firebase como solución ágil ante la necesidad de autenticación, bases de datos y storage de contenido.
+
+El manejo de estado dentro de la aplicación se souciona con el manejo del contexto, dado que implementar redux en un proyecto pequeño que realmente no lo requiere sería una mala decisión en la optimización del desarrollo, sin embargo, los estados del los multiples contextos creados son manejado con reducers, y acciones tal y como en Redux, de manera que se pueda obtner los beneficios de esta tecnoñogía dentro de la misma plataforma (react). Así mismo, la separación del dispatcher y del estado en contextos distintos accedidos por sus propios hooks (MakeStore) es un patrón de diseño que permite separar y definir muy bien la lógica de negocio, de las vistas, así como tambien evita renderizados innecesarios en componentes que solo consumen el dispatcher y no es estado.
+
+# Resultados del proyecto
+
+Debido a la falta de tiempo, muchas ideas y soluciones se quedaron en intenciones dentro del branch 
+### master
+Sin embargo, se creo un nuevo branch
+### over--hour
+donde pasadas las 5 horas, incluí un poco más de desarrollo, así mismo pretendo continuar agregando codigo a este branch y seguir desarrollando el proyecto.
+
+_______________________________________________________________________________
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
